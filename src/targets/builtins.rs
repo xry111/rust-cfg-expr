@@ -794,6 +794,16 @@ pub const ALL_BUILTINS: &[TargetInfo] = &[
         endian: Endian::little,
     },
     TargetInfo {
+        triple: Triple::new_const("loongarch64-unknown-linux-gnu"),
+        os: Some(Os::linux),
+        arch: Arch::loongarch64,
+        env: Some(Env::gnu),
+        vendor: Some(Vendor::unknown),
+        families: Families::unix,
+        pointer_width: 64,
+        endian: Endian::little,
+    },
+    TargetInfo {
         triple: Triple::new_const("m68k-unknown-linux-gnu"),
         os: Some(Os::linux),
         arch: Arch::m68k,
@@ -1791,6 +1801,7 @@ impl super::Arch {
     pub const avr: Arch = Arch::new_const("avr");
     pub const bpf: Arch = Arch::new_const("bpf");
     pub const hexagon: Arch = Arch::new_const("hexagon");
+    pub const loongarch64: Arch = Arch::new_const("loongarch64");
     pub const m68k: Arch = Arch::new_const("m68k");
     pub const mips: Arch = Arch::new_const("mips");
     pub const mips64: Arch = Arch::new_const("mips64");
